@@ -1,0 +1,40 @@
+{
+  "name": "@mathieu-bour/prettier-config",
+  "version": "1.0.0",
+  "description": "Mathieu Bour's Prettier configuration.",
+  "keywords": [
+    "prettier",
+    "config",
+    "global"
+  ],
+  "homepage": "https://github.com/mathieu-bour/prettier-config#readme",
+  "bugs": {
+    "url": "https://github.com/mathieu-bour/prettier-config/issues",
+    "email": "mathieu@csquare.ai"
+  },
+  "license": "MIT",
+  "author": "Mathieu Bour <mathieu.tin.bour@gmail.ai> (https://github.com/mathieu-bour)",
+  "main": ".prettierrc.js",
+  "repository": "github:mathieu-bour/prettier-config",
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --write '!pnpm-lock.yaml' '**/*.{js,json,yaml,md}'",
+    "format:check": "prettier --check '!pnpm-lock.yaml' '**/*.{js,json,yaml,md}'"
+  },
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^2.0.2",
+    "prettier-plugin-solidity": "^1.0.0-beta.19"
+  },
+  "devDependencies": {
+    "jest": "^27.2.3",
+    "jest-json-schema": "^5.0.0",
+    "node-fetch": "^2.6.5",
+    "prettier": "^2.4.1"
+  },
+  "peerDependencies": {
+    "prettier": "^2.4.0"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}

@@ -1,0 +1,23 @@
+name: Quality assessment
+on:
+  push:
+    branches: [main]
+    tags: ['**']
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  test:
+    name: Test with Jest
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install pnpm
+        run: npm install --global pnpm
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: pnpm
+      - name: Install and test
+        run: pnpm install-test
